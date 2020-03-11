@@ -150,9 +150,17 @@
 
         @media #{$md} {
             display: block;
+
+            .phone {
+                display: none;
+            }
         }
         @media #{$xs} {
             display: block;
+
+            .phone {
+                display: none;
+            }
         }
     }
 }

@@ -703,11 +703,17 @@ p {
   .sticky .header-top {
     display: block;
   }
+  .sticky .header-top .phone {
+    display: none;
+  }
 }
 
 @media (max-width: 767px) {
   .sticky .header-top {
     display: block;
+  }
+  .sticky .header-top .phone {
+    display: none;
   }
 }
 
@@ -720,15 +726,13 @@ p {
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .hero-section {
-    background-size: unset;
-    background-position: top left;
+    background-size: 100% 100%;
   }
 }
 
 @media (max-width: 767px) {
   .hero-section {
-    background-size: unset;
-    background-position: top left;
+    background-size: 100% 100%;
   }
 }
 
@@ -806,20 +810,6 @@ p {
   background: #fff;
   padding: 40px 30px 45px;
   border-radius: 15px;
-}
-
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-  .hero-section .hero-form .contact-form {
-    -webkit-box-shadow: 0px 19px 51px 0px rgba(0, 0, 0, 0.18);
-    box-shadow: 0px 19px 51px 0px rgba(0, 0, 0, 0.18);
-  }
-}
-
-@media (max-width: 767px) {
-  .hero-section .hero-form .contact-form {
-    -webkit-box-shadow: 0px 19px 51px 0px rgba(0, 0, 0, 0.18);
-    box-shadow: 0px 19px 51px 0px rgba(0, 0, 0, 0.18);
-  }
 }
 
 .hero-section .hero-form .contact-form h3 {

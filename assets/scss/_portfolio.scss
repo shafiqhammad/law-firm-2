@@ -1,0 +1,62 @@
+// portfolio css
+
+.portfolio-section {
+
+    .title {
+        text-align: center;
+        h2 {
+            font-size: 35px;
+            font-weight: 700;
+            margin-bottom: 50px;
+        }
+    }
+
+    .portfolio-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-left: -25px;
+        margin-right: -25px;
+
+        @media #{$lg} {
+            margin-left: -15px;
+            margin-right: -15px;
+        }
+
+        .portfolio-item {
+            width: calc(33.33% - 50px);
+            margin: 0 25px 50px;
+            text-align: center;
+
+            @media #{$lg} {
+                width: calc(33.33% - 30px);
+                margin: 0 15px 50px;
+            }
+            @media #{$md} {
+                width: calc(50% - 50px);
+                margin: 0 25px 50px;
+            }
+            @media #{$xs} {
+                width: calc(100% - 50px);
+                margin: 0 25px 50px;
+            }
+
+            .portfolio-img {
+                border-radius: 10px;
+
+                img {
+                    border-radius: 10px;
+                    width: 100%;
+                    @include box-shadow(0px 19px 51px 0px rgba(0, 0, 0, 0.18));
+                }
+
+                a {
+                    margin: 0 10px;
+                    margin-top: -30px;
+                    @include box-shadow(0px 19px 51px 0px rgba(0, 0, 0, 0.18));
+                    white-space: normal;
+                }
+            }
+        }
+    }
+}

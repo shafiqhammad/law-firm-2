@@ -1,0 +1,158 @@
+// header css
+
+.header-area {
+    @include transition(.3s);
+
+    .header-top {
+        background: $white;
+        padding: 10px 0;
+        @include transition(.3s);
+
+        .logo {
+
+            @media #{$md} {
+                display: flex;
+                justify-content: space-between;
+            }
+            @media #{$xs} {
+                display: flex;
+                justify-content: space-between;
+            }
+
+            .menu-btn {
+                background: none;
+                border: 0;
+                display: none;
+                cursor: pointer;
+
+                @media #{$md} {
+                    display: block;
+                }
+                @media #{$xs} {
+                    display: block;
+                }
+
+                i {
+                    font-size: 24px;
+                }
+            }
+        }
+
+        .phone {
+            text-align: right;
+
+            @media #{$md} {
+                text-align: center;
+            }
+            @media #{$xs} {
+                text-align: center;
+            }
+            
+            a {
+                font-size: 25px;
+                font-weight: 700;
+                color: $theme-color;
+            }
+        }
+    }
+
+    .header-bottom {
+        background: $theme-color;
+        @include transition(.3s);
+
+        @media #{$md} {
+            opacity: 0;
+            visibility: hidden;
+            position: absolute;
+            width: 100%;
+            padding: 50px 0;
+            @include transform(scale(0));
+        }
+        @media #{$xs} {
+            opacity: 0;
+            visibility: hidden;
+            position: absolute;
+            width: 100%;
+            padding: 50px 0;
+            @include transform(scale(0));
+        }
+
+        &.show {
+            @media #{$md} {
+                display: block;
+                z-index: 9;
+                opacity: 1;
+                visibility: visible;
+                @include transform(scale(1));
+            }
+            @media #{$xs} {
+                display: block;
+                z-index: 9;
+                opacity: 1;
+                visibility: visible;
+                @include transform(scale(1));
+            }
+        }
+        
+
+        .navbar-area {
+
+            nav {
+                ul {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    text-align: center;
+
+                    @media #{$md} {
+                        flex-direction: column;
+                    }
+                    @media #{$xs} {
+                        flex-direction: column;
+                    }
+
+                    li {
+                        a {
+                            display: inline-block;
+                            font-size: 17px;
+                            font-weight: 600;
+                            color: $white;
+                            padding: 12px 30px;
+
+                            @media #{$lg} {
+                                padding: 12px 22px;
+                            }
+                        }
+
+                        &:hover {
+                            a {
+                                background: $theme-color-light;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: $white;
+    z-index: 99;
+    @include box-shadow(0 5px 10px rgba($black, .2));
+
+    .header-top {
+        display: none;
+
+        @media #{$md} {
+            display: block;
+        }
+        @media #{$xs} {
+            display: block;
+        }
+    }
+}

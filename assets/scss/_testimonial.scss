@@ -1,0 +1,98 @@
+// testimonial css
+
+.testimonial-section {
+    background: $theme-color;
+
+    .title {
+        text-align: center;
+
+        h2 {
+            font-size: 35px;
+            font-weight: 800;
+            margin-bottom: 50px;
+            color: $white;
+        }
+    }
+
+    .testimonial-active {
+
+        .single-testimonial {
+            background: $white;
+            padding: 50px 50px 70px;
+            border-radius: 5px;
+            box-shadow: 0px 12px 16px 0px rgba(0, 0, 0, 0.15);
+            position: relative;
+            margin-bottom: 90px;
+
+            @media #{$lg} {
+                padding: 50px 30px;
+            }
+            @media #{$md} {
+                padding: 50px 30px;
+            }
+            @media #{$xs} {
+                padding: 50px 30px;
+            }
+
+            .quote-icon {
+                position: absolute;
+                left: 10px;
+                top: 20px;
+                opacity: .08;
+            }
+
+            p {
+                font-size: 14px;
+                line-height: 24px;
+                margin-bottom: 35px;
+            }
+
+            h5 {
+                font-size: 20px;
+                font-weight: 700;
+            }
+        }
+
+        .slick-arrow {
+            position: absolute;
+            left: 45%;
+            bottom: 0;
+            margin: auto;
+            border-radius: 50%;
+            background-color: rgba(25, 66, 98, .3);
+            width: 46px;
+            height: 46px;
+            line-height: 46px;
+            z-index: 2;
+            text-align: center;
+            color: $white;
+            cursor: pointer;
+            @include transition(.3s);
+
+            @media #{$md} {
+                left: 42%;
+            }
+            @media #{$xs} {
+                left: 35%;
+            }
+
+            &:hover {
+                background: $theme-color-light;
+            }
+
+            &.lni-chevron-right {
+                left: auto;
+                right: 45%;
+
+                @media #{$md} {
+                    right: 42%;
+                }
+                @media #{$xs} {
+                    right: 35%;
+                }
+            }
+        }
+    }
+}
+
+

@@ -1,0 +1,17 @@
+// footer css
+
+.footer {
+    background: $theme-color;
+    padding: 15px 0;
+
+    .copyright {
+        p {
+            font-size: 16px;
+            color: $white;
+
+            a {
+                color: $white;
+            }
+        }
+    }
+}
